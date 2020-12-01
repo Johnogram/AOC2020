@@ -1,17 +1,43 @@
 @import-normalize;
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
 body {
-    margin: 0;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  color: #111;
 }
 
 .AppBody {
-    display: flex;
+  display: flex;
 }
 
 .SideNav {
-    flex: 0 1 25%;
+  flex: 0 1 25%;
+}
+
+.SideNav ul {
+  list-style: none;
+  margin: 1em;
+  padding: 0;
+}
+
+.SideNav a {
+  display: block;
+  padding: 0.5em;
 }
 
 .ComponentBody {
-    flex: 0 1 75%;
+  flex: 0 1 75%;
+  padding: 0.5em;
+}
+
+a {
+  text-decoration: none;
+  font-weight: 700;
+  color: #C00;
 }

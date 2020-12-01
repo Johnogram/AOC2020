@@ -26,7 +26,7 @@ function renderNav(): JSX.Element {
           <Link to="/">Home</Link>
         </li>
         {components.map(component => (
-          <li>
+          <li key={component.route}>
             <Link to={component.route}>{component.text}</Link>
           </li>
         ))}
@@ -39,7 +39,7 @@ function renderDefaultRoute(): JSX.Element {
   return (
     <Route path="/">
       <h1>Advent of Code 2020</h1>
-      <a href="https://github.com/Johnogram/aoc2020/" target="_blank">https://github.com/Johnogram/aoc2020/</a>
+      <a href="https://github.com/Johnogram/aoc2020/" target="_blank" rel="noreferrer">https://github.com/Johnogram/aoc2020/</a>
     </Route>
   );
 }
@@ -49,7 +49,7 @@ function renderSwitch(): JSX.Element {
     <div className="ComponentBody">
       <Switch>
         {components.map(component => (
-          <Route path={component.route}>
+          <Route key={component.route} path={component.route}>
             {component.component}
           </Route>
         ))}

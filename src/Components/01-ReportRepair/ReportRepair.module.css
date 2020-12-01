@@ -1,0 +1,36 @@
+.entries {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -4px;
+}
+
+.entry {
+  background-color: lightgray;
+  border: 1px solid darkgray;
+  display: inline-block;
+  padding: 4px;
+  margin: 4px;
+}
+
+.results ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.results li {
+  flex: 0 1 30%;
+  background: #C00;
+  color: #FFF;
+  text-align: center;
+  border-radius: 4px;
+  padding: 1em;
+}
+
+.results span {
+  display: block;
+  font-weight: 700;
+  font-size: 2em;
+}
