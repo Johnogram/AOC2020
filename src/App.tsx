@@ -2,6 +2,8 @@ import React from 'react';
 import { BrowserRouter as Router, Switch, Link, Route } from 'react-router-dom';
 import { ReportRepair } from './Components/01-ReportRepair/ReportRepair';
 
+import './App.css';
+
 interface AOCComponent {
   text: string;
   route: string;
@@ -18,7 +20,7 @@ const components: AOCComponent[] = [
 
 function renderNav(): JSX.Element {
   return (
-    <nav>
+    <nav className="SideNav">
       <ul>
         <li>
           <Link to="/">Home</Link>
@@ -44,21 +46,23 @@ function renderDefaultRoute(): JSX.Element {
 
 function renderSwitch(): JSX.Element {
   return (
-    <Switch>
-      {components.map(component => (
-        <Route path={component.route}>
-          {component.component}
-        </Route>
-      ))}
-      {renderDefaultRoute()}
-    </Switch>
+    <div className="ComponentBody">
+      <Switch>
+        {components.map(component => (
+          <Route path={component.route}>
+            {component.component}
+          </Route>
+        ))}
+        {renderDefaultRoute()}
+      </Switch>
+    </div>
   );
 }
 
 function App(): JSX.Element {
   return (
     <Router>
-      <div>
+      <div className="AppBody">
         {renderNav()}
         {renderSwitch()}
       </div>

@@ -1,0 +1,17 @@
+@import-normalize;
+
+body {
+    margin: 0;
+}
+
+.AppBody {
+    display: flex;
+}
+
+.SideNav {
+    flex: 0 1 25%;
+}
+
+.ComponentBody {
+    flex: 0 1 75%;
+}
